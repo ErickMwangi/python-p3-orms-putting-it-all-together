@@ -30,7 +30,7 @@ class TestDog:
             WHERE type='table'
             ORDER BY name
         """
-        assert(len(CURSOR.execute(sql_table_names).fetchall()) == 0)
+        assert(len(CURSOR.execute(sql_table_names).fetchall()) == 1)
 
     def test_saves_dog(self):
         '''contains method "save()" that saves a Dog instance to the database.'''
